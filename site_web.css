@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Lastica';
-    src: url("../font/FontsFree-Net-Lastica.ttf");
+    src: url("font/FontsFree-Net-Lastica.ttf");
 }
 
 body {
 
-    background-image: url("../image/2background.jpeg");
+    background-image: url("image/2background.jpeg");
 
     background-repeat: no-repeat;
 
@@ -30,7 +30,6 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
 
 #zebre {
     margin: 0px;
