@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Lastica';
-    src: url("../site_web/font/FontsFree-Net-Lastica.ttf");
+    src: url("../font/FontsFree-Net-Lastica.ttf");
 }
 
 body {
 
-    background-image: url("../site_web/image/2background.jpeg");
+    background-image: url("../image/2background.jpeg");
 
     background-repeat: no-repeat;
 
@@ -25,7 +25,7 @@ h1 {
 }
 
 h2 {
-    background-image: url("../site_web/image/canon.png");
+    background-image: url("../image/canon.png");
 
     font-family: Arial, Helvetica, sans-serif;
 
