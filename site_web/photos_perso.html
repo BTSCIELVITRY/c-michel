@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link  rel="stylesheet" href="site_web.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=*, initial-scale=1.0">
+    <link rel="icon" href="../site_web/image/favicon.ico">
+    <link rel="stylesheet" href="site_web.css">
+    <title>Photos perso</title>
+</head>
+<body>
+   
+   
+    <div class="slideshow">
+      <img class="imagequibouge" src="image/carou1.JPG" >
+      <img class="imagequibouge" src="image/carou2.JPG" >    
+      <img class="imagequibouge" src="image/carou3.JPG" >
+      <img class="imagequibouge" src=""                 >
+    </div>
+    
+    
+<a id="retour" href="../site_web/Site_web_photo_html.html">retour</a>
+
+
+</body>
+</html>
+
+
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("imagequibouge");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel,1000); 
+    }
+    </script>

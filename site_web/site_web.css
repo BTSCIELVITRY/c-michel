@@ -1,0 +1,292 @@
+@font-face {
+    font-family: 'Lastica';
+    src: url("../site_web/font/FontsFree-Net-Lastica.ttf");
+}
+
+body {
+
+    background-image: url("../site_web/image/2background.jpeg");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    font-family: 'Lastica';
+
+    color: rgb(255, 255, 255);
+
+    font-size: 80px;
+}
+
+h1 {
+
+    font-size: 45px;
+    margin: auto;
+}
+
+h2 {
+    background-image: url("../site_web/image/canon.png");
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+#zebre {
+    margin: 0px;
+    padding: 0px;
+    bottom: 0px;
+    float: left;
+    z-index: -1;
+    position: relative;;
+    height: 820px;
+    border-radius: 30px;
+}
+
+/* Style de base du menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+}
+
+nav ul li {
+    position: relative;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+nav ul li:hover {
+    background-color:transparent;
+    color: aqua;
+}
+
+/* Style du sous-menu */
+nav ul ul {
+    display: none;
+    /* Cache le sous-menu par défaut */
+    position: absolute;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    min-width: 15px;
+    text-decoration: none;
+
+}
+
+nav ul ul li {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+
+}
+
+nav ul ul li:hover {
+    text-decoration: none;
+    color: aqua;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+#menu {
+    background-color: transparent;
+    color: white;
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+#menu ul > li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#menu ul > li:hover {
+    background-color: #000000;
+    color: white;
+}
+
+/* Sous-menu */
+#submenu {
+    display: none; /* Par défaut, le sous-menu est masqué */
+    background-color: transparent;
+}
+
+#submenu li {
+    padding: 10px 20px;
+    color: #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+#submenu li:hover {
+    background-color: (0, 0, 255, 0.5);
+    opacity: 0.55;
+    color: white;
+
+}
+
+/* Transition pour ouvrir/fermer le sous-menu */
+#menu ul > li:hover + #submenu {
+    display: block; /* Affiche le sous-menu au survol */
+}
+
+
+#en-savoir-plus{
+    font-size: 20px;
+}
+ 
+#para1{
+    font-size: 30px;
+}
+
+#mail:hover{
+
+color: #007BFF; /* Change la couleur du texte */
+ /* Ajoute une sous-ligne */
+}
+
+
+#retour:hover {
+    color: aqua; /* Couleur au survol */
+    border-bottom: 2px solid aqua; /* Bordure visible au survol */
+    
+}
+
+
+.hover-image {
+    transition: transform 0.35s; 
+}
+
+.hover-image:hover {
+    transform: scale(0.8);
+}
+
+
+
+.slideshow {
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+table{
+    position: absolute;
+    top: 1vh; left: 1vh;
+}
+
+.imagequibouge{
+    max-width: 30%;
+    max-height: 30%;
+    margin: 0 auto;
+}
+
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-20%); }
+    45% { transform: translateX(-20%); }
+    50% { transform: translateX(-40%); }
+    70% { transform: translateX(-40%); }
+    75% { transform: translateX(-60%); }
+    95% { transform: translateX(-60%); }
+    100% { transform: translateX(-80%); }
+}
+
+
+svg {
+ width: 3.25em;
+ transform-origin: center;
+ animation: rotate4 2s linear infinite;
+}
+
+circle {
+ fill: none;
+ stroke: hsl(214, 97%, 59%);
+ stroke-width: 2;
+ stroke-dasharray: 1, 200;
+ stroke-dashoffset: 0;
+ stroke-linecap: round;
+ animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes dash4 {
+ 0% {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+ }
+
+ 50% {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+ }
+
+ 100% {
+  stroke-dashoffset: -125px;
+ }
+}
+
+svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+   }
+   
+   circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+   }
+   
+   @keyframes rotate4 {
+    100% {
+     transform: rotate(360deg);
+    }
+   }
+   
+   @keyframes dash4 {
+    0% {
+     stroke-dasharray: 1, 200;
+     stroke-dashoffset: 0;
+    }
+   
+    50% {
+     stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+   
+    100% {
+     stroke-dashoffset: -125px;
+    }
+   }
+   
