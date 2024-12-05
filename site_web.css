@@ -37,7 +37,8 @@ h2 {
     bottom: 0px;
     float: left;
     z-index: -1;
-    position: relative;;
+    position: relative;
+    ;
     height: 820px;
     border-radius: 30px;
 }
@@ -61,7 +62,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color:transparent;
+    background-color: transparent;
     color: aqua;
 }
 
@@ -113,20 +114,21 @@ a {
     font-weight: bold;
 }
 
-#menu ul > li {
+#menu ul>li {
     padding: 15px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#menu ul > li:hover {
+#menu ul>li:hover {
     background-color: #000000;
     color: white;
 }
 
 /* Sous-menu */
 #submenu {
-    display: none; /* Par défaut, le sous-menu est masqué */
+    display: none;
+    /* Par défaut, le sous-menu est masqué */
     background-color: transparent;
 }
 
@@ -145,47 +147,53 @@ a {
 }
 
 /* Transition pour ouvrir/fermer le sous-menu */
-#menu ul > li:hover + #submenu {
-    display: block; /* Affiche le sous-menu au survol */
+#menu ul>li:hover+#submenu {
+    display: block;
+    /* Affiche le sous-menu au survol */
 }
 
 
-#en-savoir-plus{
+#en-savoir-plus {
     font-size: 20px;
 }
- 
-#redirection{
-    font-size: 40px;
-}  
 
-#para1{
+#redirection {
+    font-size: 40px;
+}
+
+#para1 {
     font-size: 30px;
 }
 
-#mail:hover{
+#mail:hover {
 
-color: #007BFF; /* Change la couleur du texte */
- /* Ajoute une sous-ligne */
+    color: #007BFF;
+    /* Change la couleur du texte */
+    /* Ajoute une sous-ligne */
 }
 
-#back{
+#back {
     font-size: 40px;
-}
-#back:hover{
-    color: aqua; 
+    position: relative;
 }
 
-#retour{
+#back:hover {
+    color: aqua;
+}
+
+#retour {
     font: 90px;
     position: absolute;
 }
+
 #retour:hover {
-    color: aqua; /* Couleur au survol */
+    color: aqua;
+    /* Couleur au survol */
 }
 
 
 .hover-image {
-    transition: transform 0.35s; 
+    transition: transform 0.35s;
 }
 
 .hover-image:hover {
@@ -198,90 +206,63 @@ color: #007BFF; /* Change la couleur du texte */
     border-radius: 10px;
 }
 
-table{
-    position: absolute;
-    top: 1vh; left: 1vh;
+table {
+    position: relative;
+    top: 1vh;
+    left: 1vh;
 }
 
-.imagequibouge{
+.imagequibouge {
     max-width: 35%;
     max-height: 30%;
     margin: 0 auto;
 }
 
 @keyframes slide {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(0); }
-    25% { transform: translateX(-20%); }
-    45% { transform: translateX(-20%); }
-    50% { transform: translateX(-40%); }
-    70% { transform: translateX(-40%); }
-    75% { transform: translateX(-60%); }
-    95% { transform: translateX(-60%); }
-    100% { transform: translateX(-80%); }
-}
+    0% {
+        transform: translateX(0);
+    }
 
+    20% {
+        transform: translateX(0);
+    }
 
+    25% {
+        transform: translateX(-20%);
+    }
 
+    45% {
+        transform: translateX(-20%);
+    }
 
+    50% {
+        transform: translateX(-40%);
+    }
 
+    70% {
+        transform: translateX(-40%);
+    }
 
+    75% {
+        transform: translateX(-60%);
+    }
 
+    95% {
+        transform: translateX(-60%);
+    }
 
-
-
-
-
-
-
-
-
-
-svg {
- width: 3.25em;
- transform-origin: center;
- animation: rotate4 2s linear infinite;
-}
-
-circle {
- fill: none;
- stroke: hsl(214, 97%, 59%);
- stroke-width: 2;
- stroke-dasharray: 1, 200;
- stroke-dashoffset: 0;
- stroke-linecap: round;
- animation: dash4 1.5s ease-in-out infinite;
-}
-
-@keyframes rotate4 {
- 100% {
-  transform: rotate(360deg);
- }
-}
-
-@keyframes dash4 {
- 0% {
-  stroke-dasharray: 1, 200;
-  stroke-dashoffset: 0;
- }
-
- 50% {
-  stroke-dasharray: 90, 200;
-  stroke-dashoffset: -35px;
- }
-
- 100% {
-  stroke-dashoffset: -125px;
- }
+    100% {
+        transform: translateX(-80%);
+    }
 }
 
 svg {
     width: 3.25em;
     transform-origin: center;
     animation: rotate4 2s linear infinite;
-   }
-   
-   circle {
+}
+
+circle {
     fill: none;
     stroke: hsl(214, 97%, 59%);
     stroke-width: 2;
@@ -289,30 +270,68 @@ svg {
     stroke-dashoffset: 0;
     stroke-linecap: round;
     animation: dash4 1.5s ease-in-out infinite;
-   }
-   
-   @keyframes rotate4 {
+}
+
+@keyframes rotate4 {
     100% {
-     transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-   }
-   
-   @keyframes dash4 {
+}
+
+@keyframes dash4 {
     0% {
-     stroke-dasharray: 1, 200;
-     stroke-dashoffset: 0;
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
     }
-   
+
     50% {
-     stroke-dasharray: 90, 200;
-     stroke-dashoffset: -35px;
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
     }
-   
+
     100% {
-     stroke-dashoffset: -125px;
+        stroke-dashoffset: -125px;
     }
-   }
-   
-#textemarche{
+}
+
+svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+}
+
+circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash4 {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dashoffset: -125px;
+    }
+}
+
+#textemarche {
     font-size: 30px;
 }

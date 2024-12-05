@@ -7,141 +7,107 @@
     <title>La photographie </title>
     <link rel="icon" href="image/favicon.ico">
     <link rel="stylesheet" href="site_web.css">
-    <strong>La Photographie</strong>
-    <h1>Comment ca marche ?</h1>
+
+
 </head>
 
+
 <body>
-
-    <body>
-
-        <nav id="menu">
-            <ul>
-                <li onclick="toggleMenu()">Index</li>
-                <ul id="submenu">
-                    <li>
-                        <div>
-                            <a href="Page_construction.html">Comment prendre de belles photos</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="page2_site_web_.comment_ca_marche.html">Comment ca marche</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="photos_perso.html">Mes photos perso</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#en-savoir-plus">Mon Email</a>
-                        </div>
-                    </li>
-                </ul>
+    <strong>La Photographie</strong>
+    <h1>Comment ca marche ?</h1>
+    <nav id="menu">
+        <ul>
+            <li onclick="toggleMenu()">Index</li>
+            <ul id="submenu">
+                <li>
+                    <div>
+                        <a href="Page_construction.html">Comment prendre de belles photos</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="page2_site_web_.comment_ca_marche.html">Comment ca marche</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="photos_perso.html">Mes photos perso</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#en-savoir-plus">Mon Email</a>
+                    </div>
+                </li>
             </ul>
-        </nav>
+        </ul>
+    </nav>
 
 
 
-        <script>
-            function toggleMenu() {
-                const submenu = document.getElementById("submenu");
-                // Affiche ou cache le sous-menu
-                if (submenu.style.display === "block") {
-                    submenu.style.display = "none";
-                } else {
-                    submenu.style.display = "block";
-                }
+    <script>
+        function toggleMenu() {
+            const submenu = document.getElementById("submenu");
+            // Affiche ou cache le sous-menu
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
             }
-        </script>
+        }
+    </script>
 
 
-        <img src="image/zebre.jpg" alt="zebre" id="zebre" usemap="#zebremap">
-        <map name="zebremap">
-            <area shape="square" coords="1,1 ,1550,1552" alt="zebrephoto"
-                href="http://www.reservedebandia.com/accueil.html">
-        </map>
+    <img src="image/zebre.jpg" alt="zebre" id="zebre">
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <section>
+        <p id="para1">Voici avec quelle appareil cette photo a ete realise<br>Un cannon 350 Digital</p>
+    </section>
+
+    <a href="https://fr.wikipedia.org/wiki/Canon_EOS_350D"><img src="image/canon.png" alt="350D" class="hover-image"></a>
 
 
-        <br /><br /><br /><br /><br /><br /><br /><br /> <br />
-
-        <section>
-            <p id="para1">Voici avec quelle appareil cette photo a ete realise<br />Un cannon 350 Digital</p>
-        </section>
-
-        <a href="https://fr.wikipedia.org/wiki/Canon_EOS_350D"><img src="image/canon.png" class="hover-image"></a>
+    <br><br>
 
 
-        <br /><br />
+    <section id="en-savoir-plus">
+
+        <h2>Formulaire</h2>
+        <form action="mailto:mvaumarne@gmail.com" method="post" enctype="text/plain">
+            <!-- Champ pour le nom -->
+            <label for="nom">Nom :</label><br>
+            <input type="text" id="nom" name="nom" style="width: 200px;" required><br><br>
+    
+            <!-- Champ pour le prénom -->
+            <label for="prenom">Prenom :</label><br>
+            <input type="text" id="prenom" name="prenom" style="width: 200px;" required><br><br>
+    
+            <!-- Choix du genre -->
+            <span>Genre :</span><br>
+            <input type="radio" id="femme" name="genre" value="Femme">
+            <label for="femme">Femme</label><br>
+            <input type="radio" id="homme" name="genre" value="Homme">
+            <label for="homme">Homme</label><br><br>
+    
+            <!-- Zone pour l'email -->
+            <label for="email">Votre email :</label><br>
+            <input type="email" id="email" name="email" style="width: 300px;" required><br><br>
+    
+            <!-- Zone de texte -->
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="8" cols="50" required></textarea><br><br>
+    
+            <!-- Boutons -->
+            <input type="reset" value="Effacer">
+            <input type="submit" value="Envoyer">
+        </form>
+
+       
+    </section>
 
 
-
-        <section id="en-savoir-plus">
-
-
-            <script>
-                function envoyerEmail() {
-                    // Récupération des valeurs du formulaire
-                    const genre = document.querySelector('input[name="genre"]:checked')?.value || "Non spécifié";
-                    const nom = document.getElementById('nom').value;
-                    const prenom = document.getElementById('prenom').value;
-                    const email = document.getElementById('email').value;
-                    const message = document.getElementById('message').value;
-
-                    // Création du corps de l'email
-                    const sujet = encodeURIComponent("Informations de formulaire");
-                    const corps = encodeURIComponent(
-                        `Genre : ${genre}\n` +
-                        `Nom : ${nom}\n` +
-                        `Prénom : ${prenom}\n` +
-                        `Email : ${email}\n` +
-                        `Message : ${message}\n`
-                    );
-
-                    // Modification du lien mailto
-                    const mailto = `mailto:mvaumarne@gmail.com?subject=${sujet}&body=${corps}`;
-                    document.getElementById('mail').setAttribute('href', mailto);
-                }
-            </script>
-
-            <h1>Formulaire :</h1>
-            <form submit="envoyerEmail()">
-                <!-- Champ pour le nom -->
-                <label for="nom">Nom :</label><br>
-                <input type="text" id="nom" name="nom" style="width: 200px;"><br><br>
-
-                <!-- Champ pour le prénom -->
-                <label for="prenom">Prenom :</label><br>
-                <input type="text" id="prenom" name="prenom" required style="width: 200px;"><br><br>
-
-                <!-- Choix du genre -->
-                <label for="genre">Genre :</label><br>
-                <input type="radio" id="femme" name="genre" value="Femme" >
-                <label for="femme">Femme</label><br>
-                <input type="radio" id="homme" name="genre" value="Homme" >
-                <label for="homme">Homme</label><br><br>
-
-                <!-- Zone pour l'email -->
-                <label for="email">Votre email :</label><br>
-                <input type="email" id="email" name="email"  style="width: 300px;"><br><br>
-
-                <!-- Zone de texte -->
-                <label for="message">Message :</label><br>
-                <textarea id="message" name="message" rows="8" cols="100" ></textarea>
-                <br>
-
-                <input type="reset" value="Effacer">
-            </form>
-
-            <p>
-                <a id="mail" href="mailto:mvaumarne@gmail.com">Cliquez ici pour envoyer</a>
-            </p>
-
-        </section>
-
-
-    </body>
+</body>
 
 </html>
