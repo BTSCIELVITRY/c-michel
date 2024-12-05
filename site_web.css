@@ -154,6 +154,10 @@ a {
     font-size: 20px;
 }
  
+#redirection{
+    font-size: 40px;
+}  
+
 #para1{
     font-size: 30px;
 }
@@ -164,10 +168,16 @@ color: #007BFF; /* Change la couleur du texte */
  /* Ajoute une sous-ligne */
 }
 
+#back{
+    font-size: 40px;
+}
+#back:hover{
+    color: aqua; 
+}
+
 #retour{
     font: 90px;
     position: absolute;
-
 }
 #retour:hover {
     color: aqua; /* Couleur au survol */
