@@ -13,7 +13,7 @@
 <body>
     <strong>La Photographie</strong>
     <h1>Comment ca marche ?</h1>
-     <!-- creation  -->
+    <!-- creation  -->
     <nav id="menu">
         <ul>
             <li onclick="toggleMenu()">Index</li>
@@ -57,7 +57,14 @@
     </script>
 
 
-    <img src="image/zebre.jpg" alt="zebre" id="zebre">
+
+    <img src="image/zebre.jpg" alt="zebre" id="zebre" usemap="#zebreMap">
+
+    <map name="zebreMap">
+        <!-- Zone rectangulaire -->
+        <area shape="rect" coords="1,1,1550,1152" alt="zebreeeeeeee" href="http://www.reservedebandia.com">
+    </map>
+
 
     <br><br><br><br><br><br><br><br><br>
 
@@ -65,7 +72,8 @@
         <p id="para1">Voici avec quelle appareil cette photo a ete realise<br>Un cannon 350 Digital</p>
     </section>
 
-    <a href="https://fr.wikipedia.org/wiki/Canon_EOS_350D"><img src="image/canon.png" alt="350D" class="hover-image"></a>
+    <a href="https://fr.wikipedia.org/wiki/Canon_EOS_350D"><img src="image/canon.png" alt="350D"
+            class="hover-image"></a>
 
 
     <br><br>
@@ -78,32 +86,36 @@
             <!-- Champ pour le nom -->
             <label for="nom">Nom :</label><br>
             <input type="text" id="nom" name="nom" style="width: 200px;" required><br><br>
-    
+
             <!-- Champ pour le prénom -->
             <label for="prenom">Prenom :</label><br>
             <input type="text" id="prenom" name="prenom" style="width: 200px;" required><br><br>
-    
+
             <!-- Choix du genre -->
-            <span>Genre :</span><br>
-            <input type="radio" id="femme" name="genre" value="Femme">
-            <label for="femme">Femme</label><br>
-            <input type="radio" id="homme" name="genre" value="Homme">
-            <label for="homme">Homme</label><br><br>
-    
+            <span>Type d'appareil :</span><br><br>
+
+            <input type="radio" id="argentique" name="argentique" value="!">
+            <label for="argentique">Argentique</label><br>
+
+            <input type="radio" id="Digital" name="Digital" value="!">
+            <label for="Digital">Digital</label><br>
+
+            <input type="radio" id="argentique" name="argentique" value="!">
+            <label for="argentique">Les deux</label><br><br>
             <!-- Zone pour l'email -->
             <label for="email">Votre email :</label><br>
             <input type="email" id="email" name="email" style="width: 300px;" required><br><br>
-    
+
             <!-- Zone de texte -->
-            <label for="message">Message :</label><br>
-            <textarea id="message" name="message" rows="8" cols="50" required></textarea><br><br>
-    
+            <label for="message">Message : (sans accent svp)</label><br>
+            <textarea id="message" name="message" rows="8" cols="55" required></textarea><br><br>
+
             <!-- Boutons -->
             <input type="reset" value="Effacer">
             <input type="submit" value="Envoyer">
         </form>
 
-       
+
     </section>
 
 

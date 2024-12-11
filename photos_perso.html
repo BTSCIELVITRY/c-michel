@@ -14,35 +14,36 @@
   <a id="retour" href="index.html">retour</a>
 
   <div class="slideshow">
-    <img class="imagequibouge" src="image/carou1.JPG">
-    <img class="imagequibouge" src="image/carou2.JPG">
-    <img class="imagequibouge" src="image/carou3.JPG">
-    <img class="imagequibouge" src="image/carou4.JPG">
-    <img class="imagequibouge" src="image/carou5.JPG">
-    <img class="imagequibouge" src="image/carou6.JPG" height="500" width="6000">
+    <img class="imagequibouge" alt="carou1" src="image/carou1.JPG">
+    <img class="imagequibouge" alt="carou2" src="image/carou2.JPG">
+    <img class="imagequibouge" alt="carou3" src="image/carou3.JPG">
+    <img class="imagequibouge" alt="carou4" src="image/carou4.JPG">
+    <img class="imagequibouge" alt="carou5" src="image/carou5.JPG">
+    <img class="imagequibouge" alt="carou6" src="image/carou6.JPG" height="500" width="6000">
   </div>
 
 
 
 
+  <script>
+    var myIndex = 0;
+    carousel();
+  
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("imagequibouge");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 1000);
+    }
+  </script>
 
 </body>
+ 
+
 
 </html>
-
-<script>
-  var myIndex = 0;
-  carousel();
-
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("imagequibouge");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) { myIndex = 1 }
-    x[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 1000);
-  }
-</script>
