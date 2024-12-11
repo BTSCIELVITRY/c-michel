@@ -140,10 +140,9 @@ a {
 }
 
 #submenu li:hover {
-    background-color: (0, 0, 255);
-    opacity: 0.55;
+    color: rgb(0, 0, 255);
+    opacity: 0.5; 
     color: white;
-
 }
 
 /* Transition pour ouvrir/fermer le sous-menu */
@@ -333,4 +332,7 @@ circle {
 
 #textemarche {
     font-size: 30px;
+}
+#grospara{
+    font-size: 20px;
 }
