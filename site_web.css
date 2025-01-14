@@ -15,7 +15,7 @@ body {
 
     color: rgb(255, 255, 255);
 
-    font-size: 80px;
+    font-size: 75px;
 }
 
 h1 {
@@ -179,7 +179,7 @@ a {
 }
 
 #retour {
-    font: 90px;
+    font: 50px;
     position: absolute;
 }
 
@@ -307,27 +307,34 @@ circle {
     animation: dash4 1.5s ease-in-out infinite;
 }
 
+/* Animation pour faire tourner un élément sur lui-même à 360 degrés */
 @keyframes rotate4 {
     100% {
+        /* Rotation complète de l'élément */
         transform: rotate(360deg);
     }
 }
 
+/* Animation pour créer un effet de mouvement sur un tracé SVG */
 @keyframes dash4 {
     0% {
+        /* Définir le motif initial du tracé  */
         stroke-dasharray: 1, 200;
         stroke-dashoffset: 0;
     }
 
     50% {
+    
         stroke-dasharray: 90, 200;
         stroke-dashoffset: -35px;
     }
 
     100% {
+        /* Décale davantage le tracé pour donner un effet */
         stroke-dashoffset: -125px;
     }
 }
+
 
 #textemarche {
     font-size: 30px;
