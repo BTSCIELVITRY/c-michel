@@ -22,23 +22,19 @@
     <img class="imagequibouge" alt="carou6" src="image/carou6.JPG" height="500" width="6000">
   </div>
 
-
-
-
   <script>
     var myIndex = 0;
     carousel();
-  
-    function carousel() {
+    function carousel() {   //recupere toutes les images dans classes "imagequibouge"
       var i;
       var x = document.getElementsByClassName("imagequibouge");
       for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+        x[i].style.display = "none";               // cache toutes les images
       }
       myIndex++;
-      if (myIndex > x.length) { myIndex = 1 }
+      if (myIndex > x.length) { myIndex = 1 }        // incremente mmyindex, quand depasse nb image -> revient a 1
       x[myIndex - 1].style.display = "block";
-      setTimeout(carousel, 1000);
+      setTimeout(carousel, 2000);                    // se relance toutes les 2000 ms -> 2 sec
     }
   </script>
 
