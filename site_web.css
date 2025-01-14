@@ -307,7 +307,7 @@ circle {
     animation: dash4 1.5s ease-in-out infinite;
 }
 
-/* Animation pour faire tourner un élément sur lui-même à 360 degrés */
+/* Animation pour faire tourner un élément MERCI A TOI https://www.youtube.com/watch?v=bo3Lf8_QKBw&t=167s */
 @keyframes rotate4 {
     100% {
         /* Rotation complète de l'élément */
